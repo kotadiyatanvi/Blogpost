@@ -1,0 +1,219 @@
+/* ================= LIGHT THEME ================= */
+
+.explore-wrapper {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.post-detail-wrapper {
+  min-height: 400px; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  background: #ffffff;
+}
+
+.post-card {
+  width: 850px;
+  min-height: 400px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 20px #8ca5bf;
+  background: #f3f0f0;
+  flex-direction: row;
+}
+
+.post-image {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post-content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.post-content h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #000000;
+}
+
+.post-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #111111;
+}
+
+.post-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #e9d76f;
+  color: black;
+}
+
+.btn.delete:hover {
+  background-color: #a93226;
+  color: white;
+}
+
+.page-btn:disabled {
+  background-color: #999999;
+  color: #0e0d0d;
+  cursor: not-allowed;
+  opacity: 0.5;
+  border: 1px solid #999999;
+}
+
+/* ================= Explore Header ================= */
+
+.explore-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  margin-top: 25px;
+}
+
+.explore-header h1 {
+  margin: 0;
+}
+
+.explore-header input[type="search"] {
+  width: 300px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ================= Create Form ================= */
+
+.create-form {
+  margin-top: 20px;
+}
+
+.create-form input[type="text"] {
+  width: 1000px;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  display: block;
+  margin-left: 20px;
+}
+
+.btn3 {
+  padding: 8px 20px;
+  margin: 8px 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #0c1161;
+  color: white;
+  margin-left: 20px;
+}
+
+/* ================= DARK THEME ================= */
+
+.explore-wrapper.dark {
+  background: #15151a;
+  min-height: 100vh;
+  color: #e5e7eb;
+}
+
+/* Header */
+.explore-wrapper.dark .explore-header {
+  background:#15151a;
+}
+
+.explore-wrapper.dark .explore-header h1 {
+  color: #f1f5f9;
+}
+
+.explore-wrapper.dark .explore-header input[type="search"] {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+.explore-wrapper.dark .explore-header input::placeholder {
+  color: #94a3b8;
+}
+
+/* Cards container background */
+.explore-wrapper.dark .card-container {
+  background: transparent;
+}
+
+/* Card light, text black */
+.explore-wrapper.dark .post-card {
+  background: #f8fafc;              /* light / white card */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.explore-wrapper.dark .post-content h1 {
+  color: #000000;
+}
+
+.explore-wrapper.dark .post-content p {
+  color: #111111;
+}
+
+/* Buttons inside card */
+.explore-wrapper.dark .btn {
+  background-color: #0c1161;
+  color: white;
+}
+
+.explore-wrapper.dark .btn.delete:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
+/* Create Form */
+.explore-wrapper.dark .create-form input[type="text"] {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+.explore-wrapper.dark .create-form input::placeholder {
+  color: #94a3b8;
+}
+
+.explore-wrapper.dark .btn3 {
+  background-color: #38bdf8;
+  color: #020617;
+}
+
+.explore-wrapper.dark .btn3:hover {
+  background-color: #0ea5e9;
+}
+
+/* Pagination disabled */
+.explore-wrapper.dark .page-btn:disabled {
+  background-color: #334155;
+  color: #94a3b8;
+  border: 1px solid #334155;
+}

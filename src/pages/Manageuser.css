@@ -1,0 +1,106 @@
+.manageuser {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.manageuser h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table styles */
+.manageuser table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.manageuser thead {
+  background-color: #1f2937; /* dark header */
+  color: #ffffff;
+}
+
+.manageuser th,
+.manageuser td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.manageuser th {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.manageuser tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.manageuser tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.manageuser tbody tr:hover {
+  background-color: #eef2ff;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .manageuser table,
+  .manageuser thead,
+  .manageuser tbody,
+  .manageuser th,
+  .manageuser td,
+  .manageuser tr {
+    display: block;
+  }
+
+  .manageuser thead {
+    display: none;
+  }
+
+  .manageuser tr {
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .manageuser td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .manageuser td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #374151;
+  }
+}

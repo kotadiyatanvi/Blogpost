@@ -1,0 +1,95 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.img-center img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1; 
+  margin-top: 10px;
+}
+
+.card-content h1 {
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #000; /* default black for light theme */
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555; /* default gray for light theme */
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+  margin-top: auto; 
+}
+
+.btn1 {
+  background: #2251e9;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-left: 11px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.btn2 {
+  background: #ce4343;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-left: 11px;
+  height: 35px;
+  cursor: pointer;
+}
+
+/* ================= DARK THEME ================= */
+
+.dark .card {
+  background: #1f2937; /* dark card bg */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.dark .card-content h1 {
+  color: #f8fafc; /* white title in dark mode */
+}
+
+.dark .card-content p {
+  color: #e5e7eb; /* light gray text */
+}
+
+.dark .btn1 {
+  background: #3b82f6; /* brighter blue for dark mode */
+  color: #f8fafc;
+}
+
+.dark .btn2 {
+  background: #ef4444; /* red for delete */
+  color: #f8fafc;
+}

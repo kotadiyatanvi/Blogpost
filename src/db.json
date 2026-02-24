@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "244a",
+      "title": "Sample Title",
+      "body": "Sample Body Content",
+      "image": "https://picsum.photos/600/400"
+    }
+  ],
+  
+  "users": [
+    { "id": "1", "phone": "123", "role": "Admin" }
+  ]
+
+
+}

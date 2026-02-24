@@ -1,0 +1,65 @@
+/* ===== Modal Backdrop ===== */
+.model-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+/* ===== Modal Box ===== */
+.model {
+  background-color: rgb(252, 249, 249);
+  padding: 25px;
+  width: 350px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Modal Action Buttons Container ===== */
+.model-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ===== RESET ONLY MODAL BUTTONS ===== */
+.model-actions button {
+  all: unset;                /* remove global button CSS */
+  box-sizing: border-box;
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+/* ===== Cancel Button ===== */
+.model-actions .btn-cancel {
+  background-color: gray;
+}
+
+.model-actions .btn-cancel:hover {
+  background-color: darkgray;
+}
+
+/* ===== Delete / Logout Button ===== */
+.model-actions .btn-delete {
+  background-color: red;
+}
+
+.model-actions .btn-delete:hover {
+  background-color: darkred;
+}

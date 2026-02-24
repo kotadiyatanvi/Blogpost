@@ -1,0 +1,17 @@
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 30px;
+    background: rgb(2, 2, 87);
+    color: white;
+    height: 70px;
+  }
+  
+ 
+  .footer.dark {
+    background: #020617;  
+    color: #e5e7eb;
+  }
+  

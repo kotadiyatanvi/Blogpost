@@ -1,0 +1,184 @@
+/* ================= GLOBAL VARIABLES ================= */
+:root {
+  --primary-blue: rgb(3, 3, 129); /* લાઈટ થીમ માટે મેઈન બ્લુ */
+  --dark-bg: #020617;           /* ડાર્ક થીમ માટે મેઈન કલર */
+  --card-light-bg: #ffffff;
+  --card-dark-bg: #1f2937;
+}
+
+/* ================= PAGE LAYOUT ================= */
+.home-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.home-dark {
+  background-color: #131314; /* પેજ બેકગ્રાઉન્ડ ડાર્ક */
+  color: #ffffff;
+}
+
+/* ================= NAVBAR & FOOTER (Uniform) ================= */
+.navbar, .footer {
+  display: flex;
+  align-items: center;
+  padding: 14px 30px;
+  background: var(--primary-blue);
+  color: white;
+  height: 70px;
+}
+
+.navbar { justify-content: space-between; }
+.footer { justify-content: center; }
+
+/* Dark State for Navbar & Footer */
+.navbar.nav-dark, .footer.dark {
+  background: var(--dark-bg);
+  color: #f1f5f9;
+}
+
+/* ================= CARD CONTAINER ================= */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; 
+  margin: 30px;
+  padding: 20px;
+}
+
+/* ================= CARD STYLE (Uniform) ================= */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+  background: var(--card-light-bg);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 2px solid var(--primary-blue); /* લાઈટ મોડમાં બ્લુ બોર્ડર */
+  transition: all 0.3s ease;
+}
+
+/* Dark Card */
+.dark .card, .home-dark .card {
+  background: var(--card-dark-bg);
+  color: #ffffff;
+  border: 1px solid var(--dark-bg); /* ડાર્ક મોડમાં ડાર્ક બોર્ડર */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* ================= CARD CONTENT ================= */
+.img-center img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1; 
+  margin-top: 10px;
+}
+
+.card-content h1 {
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  color: #000;
+}
+
+.dark .card-content h1, .home-dark .card-content h1 {
+  color: #f8fafc;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.dark .card-content p, .home-dark .card-content p {
+  color: #e5e7eb;
+}
+
+/* ================= BUTTONS ================= */
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+  margin-top: auto; 
+}
+
+.btn1, .btn2 {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn1 { background: #2251e9; color: white; }
+.btn2 { background: #ce4343; color: white; }
+
+/* ================= NAVBAR ELEMENTS ================= */
+.navbar h1 { margin: 0; padding: 0; font-size: 1.8rem; }
+.nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+.color { color: white; text-decoration: none; font-weight: 500; }
+.active-nav { border-bottom: 3px solid #ff5722; padding-bottom: 5px; font-weight: 600; }
+
+.user-role {
+  font-size: 18px;
+  font-weight: 600;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #eeeff3;
+  color: #0717ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ================= MODALS ================= */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirm-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+.navbar.nav-dark ~ .confirm-overlay .confirm-box {
+  background: #1f2937;
+  color: white;
+}
+
+/* ================= UTILITIES ================= */
+.title { font-size: 2rem; margin: 20px; font-weight: bold; }
+.top-scroll-btn {
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+.top-scroll-btn:hover { transform: scale(1.1); }
